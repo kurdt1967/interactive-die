@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Die</title>
+    <title>Transform objects</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Style for the "Click/Tap" message */
+        #clickMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: white;
+            font-family: Arial, sans-serif;
+            z-index: 100; /* Make sure it's on top of the canvas */
+        }
+    </style>
 </head>
 <body>
+    <div id="clickMessage">Click or touch anywhere to start</div>
     <canvas class="webgl"></canvas>
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://threejs.org/build/three.module.js"
-        }
-    }
-    </script>
-    <script src="./script.js" type="module"></script>
 </body>
 </html>
